@@ -6,9 +6,10 @@
 
 ## 1. Problembeschreibung
 
-Ein Benutzer meldet eine verdächtige E-Mail. Der Absender fordert ihn auf, sein Passwort über einen Link zu bestätigen.
+Ein Benutzer meldet eine verdächtige E-Mail. Der Absender fordert ihn auf, sein Passwort über einen enthaltenen Link zu bestätigen.
 
 Die E-Mail weist mehrere typische Phishing-Merkmale auf:
+
 - Unbekannte Absenderadresse
 - Rechtschreibfehler im Nachrichtentext
 - Aufforderung zur Eingabe von Zugangsdaten über einen Link
@@ -17,52 +18,83 @@ Der Benutzer hat den Link nicht angeklickt und keine Zugangsdaten eingegeben.
 
 ## 2. Ersteinschätzung
 
-Es handelt sich um einen sicherheitsrelevanten Vorfall.
+Es handelt sich um einen sicherheitsrelevanten Incident.
 
-Da der Benutzer nicht mit dem Link interagiert hat, liegen zunächst keine konkreten Hinweise auf eine Kompromittierung seines Kontos oder Geräts vor.
+Die E-Mail weist typische Merkmale eines Phishing-Versuchs auf. Da der Benutzer den Link nicht angeklickt und keine Zugangsdaten eingegeben hat, gibt es zunächst keine konkreten Hinweise auf eine Kompromittierung seines Kontos oder Geräts.
 
-Der Vorfall muss dennoch untersucht werden, um festzustellen, ob weitere Benutzer die Nachricht erhalten oder mit dem Link interagiert haben.
+Es muss dennoch geprüft werden, ob weitere Benutzer die Nachricht erhalten oder mit dem enthaltenen Link interagiert haben.
 
 ## 3. Untersuchung
 
 Im Rahmen des simulierten Szenarios wurden folgende Schritte durchgeführt:
 
-1. Prüfung der Absenderadresse, des Nachrichteninhalts und des enthaltenen Links.
-2. Identifizierung typischer Phishing-Merkmale.
-3. Überprüfung der Empfänger mithilfe von Message Trace.
-4. Prüfung, ob Empfänger mit dem Link interagiert haben.
-5. Überprüfung auf verdächtige Aktivitäten im Zusammenhang mit dem Konto des meldenden Benutzers.
+1. Analyse der verdächtigen E-Mail.
+2. Überprüfung der Absenderadresse, des Nachrichteninhalts und des enthaltenen Links.
+3. Identifizierung typischer Phishing-Merkmale.
+4. Überprüfung der Empfänger mithilfe von Mail Flow bzw. Message Trace.
+5. Prüfung, ob Benutzer mit dem enthaltenen Link interagiert haben.
+6. Überprüfung auf Hinweise auf eine Kompromittierung des Benutzerkontos des meldenden Benutzers.
 
 ## 4. Durchgeführte Maßnahmen
 
-- Die E-Mail wurde als Phishing-Versuch identifiziert.
-- Die Nachricht wurde gemäß den internen Sicherheitsrichtlinien unter Quarantäne gestellt bzw. entfernt.
-- Der meldende Benutzer wurde darüber informiert, dass keine verdächtigen Aktivitäten in seinem Konto festgestellt wurden.
-- Falls andere Benutzer mit dem Link interagiert oder Zugangsdaten eingegeben hätten, wäre eine Eskalation an das zuständige Security-Team bzw. den Second-Level-Support erforderlich gewesen.
+- Die Phishing-Nachricht wurde gemäß der internen Sicherheitsrichtlinie isoliert bzw. entfernt.
+- Es wurden keine Hinweise auf eine Interaktion des meldenden Benutzers mit dem Link festgestellt.
+- Es wurden keine Hinweise auf eine Kompromittierung seines Benutzerkontos festgestellt.
+- Falls bei anderen Benutzern eine Interaktion mit dem Link oder eine Eingabe von Zugangsdaten festgestellt würde, wäre eine Eskalation an das zuständige Security- bzw. Second-Level-Team erforderlich.
 
-## 5. Ergebnis
+## 5. Kommunikation mit dem Benutzer
 
-Die E-Mail wurde als Phishing-Versuch erkannt und entsprechende Maßnahmen wurden eingeleitet.
+### Erste Antwort
 
-Im Zusammenhang mit dem Konto des meldenden Benutzers wurden keine verdächtigen Aktivitäten festgestellt. Der Benutzer wurde angewiesen, die Nachricht zu löschen, falls sie noch in seinem Postfach vorhanden war.
+Guten Tag,
 
-## 6. Eingesetzte Kenntnisse und Fähigkeiten
+vielen Dank, dass Sie die verdächtige E-Mail gemeldet haben und nicht auf den Link geklickt haben. Das war genau die richtige Vorgehensweise.
+
+Wir überprüfen die E-Mail und prüfen, ob weitere Benutzer diese Nachricht erhalten haben und ob jemand mit dem enthaltenen Link interagiert hat.
+
+Bitte klicken Sie bis dahin nicht auf den Link und antworten Sie nicht auf die Nachricht.
+
+Mit freundlichen Grüßen  
+Ihr IT-Support
+
+### Abschlussmeldung
+
+Guten Tag,
+
+vielen Dank nochmals für Ihre Meldung.
+
+Wir haben die E-Mail als Phishing-Nachricht identifiziert und entsprechende Maßnahmen eingeleitet. Für Ihr Benutzerkonto wurden keine verdächtigen Aktivitäten festgestellt.
+
+Sie müssen aktuell keine weiteren Maßnahmen ergreifen. Bitte löschen Sie die E-Mail, falls sie sich noch in Ihrem Postfach befindet.
+
+Vielen Dank für Ihre Aufmerksamkeit.
+
+Mit freundlichen Grüßen  
+Ihr IT-Support
+
+## 6. Ergebnis
+
+Die gemeldete E-Mail wurde als Phishing-Nachricht identifiziert und gemäß der internen Sicherheitsrichtlinie behandelt.
+
+Beim meldenden Benutzer wurden keine Hinweise auf eine Interaktion mit dem Link oder eine Kompromittierung des Kontos festgestellt. Die Nachricht wurde isoliert bzw. entfernt.
+
+## 7. Eingesetzte Kenntnisse und Fähigkeiten
 
 - Erkennung von Phishing-Versuchen
 - Analyse verdächtiger E-Mails
 - Microsoft 365 Message Trace
 - Incident Handling
+- Informationssicherheit
 - Benutzerkommunikation
-- Grundkenntnisse der IT-Sicherheitsrichtlinien
 - Eskalationsprozesse im IT-Support
 
-## 7. Erkenntnisse
+## 8. Erkenntnisse
 
 Auch wenn ein Benutzer nicht auf einen verdächtigen Link geklickt hat, sollte eine gemeldete Phishing-E-Mail untersucht werden.
 
 Die Überprüfung der Empfänger und möglicher Benutzerinteraktionen hilft dabei, den Umfang eines Sicherheitsvorfalls einzuschätzen.
 
-Der First-Level-Support sollte die internen Sicherheitsprozesse einhalten und vermutete Konto- oder Sicherheitskompromittierungen an das zuständige Security-Team eskalieren.
+Der First-Level-Support sollte die internen Sicherheitsrichtlinien einhalten, verdächtige Nachrichten entsprechend behandeln und mögliche Kompromittierungen an das zuständige Security-Team eskalieren.
 
 ---
 
