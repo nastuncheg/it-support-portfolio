@@ -1,4 +1,4 @@
-# Ticket 05: Offboarding eines Mitarbeiters und Zugriff auf sein Postfach
+# Offboarding eines Mitarbeiters und Zugriff auf sein Postfach
 
 **Ticket-Typ:** Service Request  
 **Priorität:** Mittel  
