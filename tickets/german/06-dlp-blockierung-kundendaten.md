@@ -1,4 +1,4 @@
-# Ticket 11: Verdacht auf Umgehung einer DLP-Richtlinie beim Versand von Kundendaten
+# Verdacht auf Umgehung einer DLP-Richtlinie beim Versand von Kundendaten
 
 **Ticket-Typ:** Security-Related Service Request  
 **Priorität:** Hoch  
